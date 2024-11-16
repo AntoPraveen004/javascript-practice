@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+          How to get value of selected radio button using JavaScript ?
+      </title>
+</head>
+ 
+<body>
+    <p>
+        Select a radio button and click on Submit.
+    </p>
+    Gender:
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Others">Others
+    <br>
+    <button type="button" id="button">
+        Submit
+    </button>
+    <br>
+    <div id="outer">
+       
+    </div>
+    <script>
+        let a=document.createElement('div')
+        let b=document.getElementById("outer").appendChild(a)
+        b.id="result"
+        document.getElementById("button").addEventListener('click',rambo)
+        function rambo(){
+            for (let i=0;i<document.getElementsByName("gender").length;i++)
+            {
+                if(document.getElementsByName("gender")[i].checked)
+                {
+                    alert("hi")
+                    b.innerHTML="gender"+ document.getElementsByName('gender')[i].value
+                }
+            }
+        }
+ 
+    </script>
+</body>
+</html>
+

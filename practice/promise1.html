@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const prom = new Promise((resolve, reject) => {
+            let value = true;
+            if (value) {
+                resolve();
+            } else {
+                reject();
+            }
+        });
+
+        prom.then(success).catch(failure);
+
+        function success() {
+            console.log("hi this is success");
+        }
+
+        function failure() {
+            console.log("hi I am failure");
+        }
+    </script>
+</body>
+</html>

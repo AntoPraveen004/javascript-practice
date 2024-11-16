@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            display:flex;
+            flex-direction: row;
+            height:50px;
+            justify-content: space-between;
+            background-color: aqua;
+        }
+        #box{
+            align-self: center;
+            margin-left:50x;
+        }
+        #box1{
+            align-self: center;
+            margin-right:50px
+        }
+        button{
+            margin:15% 40%;
+            width:250px;
+            border-radius:5px 20px;
+            color:blue;
+            cursor:pointer
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="box">
+            backgroung color changer
+        </div>
+        <div id="box1">
+            demoooo
+        </div>
+    </div>
+    <hr>
+    <div id="color">
+        <button id="button">change color</button>
+    </div>
+    <script>
+        let button=document.getElementById("button")
+        button.addEventListener('click',changeclr)
+        function changeclr(){
+            let a=[0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f"]
+            let h="#"
+            for(let i=0;i<6;i++){
+                let val=a[Math.floor(Math.random()*15)]
+                h=h+val
+            }
+            document.getElementById("color").style.backgroundColor=h
+            let hexaval=document.getElementById("box1").innerHTML=h
+        }
+    </script>
+</body>
+</html>

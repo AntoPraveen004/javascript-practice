@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div id="anto">
+        <p>jhbkbd</p>
+        <div id="praveen">
+            <div id="inner">
+                <p>this is the inner oara </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let array =[4,6,2,3,1,1,3,5,7,8,4,3]
+         let ans =array.reduce((accumulator,currval)=>
+         {
+             if (accumulator[currval]){
+                accumulator[currval]++
+             }
+             else{
+                 accumulator[currval]=1
+             }
+             return accumulator
+            
+         },{});
+         console.log(ans)
+         let finalans=ans.map((value,index)=>
+         {
+             if (ans[value]>1){
+                
+             }
+         })
+
+
+
+
+
+
+       let values= array.reduce((accumulator,value)=>{
+        if(!(accumulator.includes(value))){
+            accumulator.push(value)
+        }
+        return accumulator
+       },[]);
+       console.log(values)
+    </script>
+</body>
+</html>

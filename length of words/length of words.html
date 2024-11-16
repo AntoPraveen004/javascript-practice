@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            color:white;
+            margin-left:150px;
+            margin-top:15px;
+            font-size: 50px;
+        }
+        body{
+            background-color:#353B48;
+        }
+        p{
+            text-align:center;
+            color:white;
+            margin-top:10px;
+            padding-top:35px;
+            background-color:rgb(0, 0, 0);
+            font-size: 25px;
+            border-radius: 50px 50px 50px 5px;
+        }
+        #textbox{
+            padding:5px;
+            margin-left:115px;
+            margin-top:30px
+        }
+        button{
+            border-radius: 25%;
+            background-color: rgb(255, 255, 255);
+            margin-left:170px;
+            margin-top:10px;
+            box-shadow: 15px rgb(255, 255, 255);
+        }
+        #outer{
+            min-height:500px;
+            width:400px;
+            background-color: black;
+            margin:100px auto;
+            border-radius:0px 0px 50px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+       <forms>
+        <p>lenth finder</p>
+        <textarea rows="15" placeholder="Enter the text"id="textbox"></textarea>
+       </forms></br>
+       <button onclick="get()">Calculate</button>
+       <div id="result">
+
+       </div>
+    </div>
+    <SCRIPT>
+        function get(){
+            const value =document.getElementById("textbox").value
+            const list=value.split(" ")
+            let result= list.length 
+            document.getElementById("result").innerHTML=result-1+"words"
+        }
+    </SCRIPT>
+</body>
+</html>
+
+
+
+
+
+

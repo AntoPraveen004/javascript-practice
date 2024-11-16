@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function promise(ans){
+        //     const pro = new Promise((resolve,reject)=>{
+        //     let value=true;
+        //     if(value){
+        //         resolve();
+        //     }
+        //     else{
+        //         reject();
+        //     }
+        // });
+        // pro.then(success)
+        // .then(failure)
+        // .catch(failure);
+        // function success(){
+        //     console.log("hii this is sucess"+ans)
+        // }
+        // function failure(){
+        //     console.log("hi iam failure"+ans)
+        // }
+        // }
+        // promise("hello")
+
+
+        let pron=new Promise((respond,react)=>{
+            let value=true;
+            if(value){
+                setTimeout(respond,1000,"ram is fine")
+            }
+            else{
+                react("ram is not fine")
+            }
+        });
+        // pron.then((ans)=>{
+        //     console.log(ans)
+        // }).catch((ans)=>{
+        //     console.log(ans)
+        // })
+
+        let pron1=new Promise((respond,react)=>{
+            let value=false;
+            if(value){
+                respond("raja is fine");
+            }
+            else{
+                react("raja is not fine")
+            }
+        });
+        // pron1.then((ans)=>{
+        //     console.log(ans)
+        // }).catch((ans)=>{
+        //     console.log(ans)
+        // })
+
+        let pron2=new Promise((respond,react)=>{
+            let value=false;
+            if(value){
+                respond("bala is fine");
+            }
+            else{
+                react("bala is not fine")
+            }
+        });
+        // pron2.then((ans)=>{
+        //     console.log(ans)
+        // }).catch((ans)=>{
+        //     console.log(ans)
+        // })
+
+
+        Promise.any([pron,pron1,pron2])
+        .then((ans)=>{
+            console.log(ans)
+        }).catch((ans)=>{
+            console.log(ans)
+        })
+    </script>
+</body>
+</html>

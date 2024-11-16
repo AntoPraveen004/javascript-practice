@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="button">start</button>
+   <button id="button1">stop</button>
+   <button id="button2">click here</button>
+   <script>
+        let button =document.getElementById("button")
+        let button1=document.getElementById("button1")
+        let button2=document.getElementById("button2")
+        let i=0
+        let x=true
+        let z=true
+        button.addEventListener("click",start)
+        function start()
+        {
+                let y=setInterval(()=>{
+                    console.log(i)
+                    i=i+1;
+                    if(i==60)
+                    {
+                        i=0;
+                    }
+                    
+                },1000)
+                button1.addEventListener("click",stop)
+                function stop()
+                {
+                    if(z==true){
+                        clearInterval(y)
+                        z=false
+                    }
+                    
+                }
+                button2.addEventListener("click",reset)
+                function reset(){
+                    i=0;
+                    stop()
+                }
+        }
+   </script>
+</body>
+</html>
